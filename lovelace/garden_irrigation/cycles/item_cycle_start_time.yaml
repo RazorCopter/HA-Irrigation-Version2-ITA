@@ -20,7 +20,7 @@ name: >
 
     start_time.setSeconds(start_time_seconds);
 
-    return "Start Time: " + start_time.toISOString().substr(11, 5);    
+    return "Ora Avvio: " + start_time.toISOString().substr(11, 5);    
   ]]]
 show_label: true
 show_icon: false
@@ -34,7 +34,7 @@ label: >
 
     end_time.setSeconds(total_seconds);
 
-    return "<br>(Finira' circa " + end_time.toISOString().substr(11, 5) + ")";    
+    return "<br>(Finira' circa alle " + end_time.toISOString().substr(11, 5) + ")";    
   ]]]
 color: var(--paper-item-icon-active-color)
 size: 60%
@@ -123,14 +123,14 @@ tap_action:
             entities:
               #=== Run Cycle Today Only
               - entity: input_boolean.irrigation_cycle{{ cycle }}_schedule_today_only
-                name: Avvio ciclo solo oggi
+                name: Avvia ciclo solo oggi
                 tap_action: none
 
               - type: divider
 
               #=== Start Time Mode
               - entity: input_select.irrigation_cycle{{ cycle }}_start_time_type
-                name: Modalita avvio orario
+                name: Avvia modalita' tempo
                 icon: mdi:theme-light-dark
 
               #=== Actual Time
@@ -138,12 +138,12 @@ tap_action:
                 card_type: conditional
                 conditions:
                   - entity: input_select.irrigation_cycle{{ cycle }}_start_time_type
-                    state: Orario Attuale
+                    state: Actual Time
                 card:
                   type: entities
                   entities:
                     - entity: input_datetime.irrigation_cycle{{ cycle }}_start_time
-                      name: Orario Avvio
+                      name: Ora Avvio
 
               #=== Sunrise Offset
               - type: custom:hui-element
@@ -155,7 +155,7 @@ tap_action:
                   type: entities
                   entities:
                     - entity: input_number.irrigation_cycle{{ cycle }}_start_time_sunrise_offset
-                      name: Offset in minuti
+                      name: Offset in minutes
 
               #=== Sunrise Offset
               - type: custom:hui-element
@@ -167,7 +167,7 @@ tap_action:
                   type: entities
                   entities:
                     - entity: input_number.irrigation_cycle{{ cycle }}_start_time_sunset_offset
-                      name: Offset in minuti
+                      name: Offset in minutes
 
             card_mod:
               style: >
