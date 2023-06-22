@@ -28,7 +28,7 @@ entities:
     tap_action:
       action: none
     state:
-      - value: "Changing Zone..."
+      - value: "Cambio Zona..."
         styles:
           state:
             - animation: blink 2s ease infinite
