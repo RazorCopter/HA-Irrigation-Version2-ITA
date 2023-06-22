@@ -10,7 +10,7 @@ entities:
   - !include
     - ../item_status_include_section_check_box.yaml
     - entity: input_boolean.irrigation_ui_show_last_run_details
-      name: DETAILS OF LAST RUN
+      name: DETTAGLI ULTIMO AVVIO
 
   #=== LAST RUN CYCLE DATE AND TIME AND NAME
   - type: custom:button-card
