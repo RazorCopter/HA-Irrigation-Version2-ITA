@@ -58,14 +58,14 @@ tap_action:
       content:
         type: markdown
         content: >
-          ### 🌧️ Rain multiplier
+          ### 🌧️ Moltiplicatore pioggia
           
-          This multiplier will decrease watering time proportionally
-          based on the difference between the rainfall threshold and the amount of
-          rain over the last few days.
+          Questo moltiplicatore ridurra' proporzionalmente il tempo di irrigazione
+          in base alla differenza tra la soglia delle precipitazioni e la quantita' di
+          pioggia degli ultimi giorni.
 
           
-          If the threshold is reached then it will stop it altogether.
+          Se la soglia viene raggiunta, la fermerà del tutto.
 
 
           ---

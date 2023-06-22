@@ -15,7 +15,7 @@ card:
     #=== SMARTWEATHER STATIONS TITLE
     #================================
     - type: custom:button-card
-      name: SMARTWEATHER<br>STATIONS
+      name: SMARTWEATHER<br>STATIONI
       styles:
         card:
           - font-size: 11px

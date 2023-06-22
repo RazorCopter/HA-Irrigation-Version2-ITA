@@ -18,7 +18,7 @@ entities:
     cards:
 
       - type: custom:button-card
-        name: -- CYCLES --
+        name: -- CICLI --
         styles:
           card:
             - font-size: 16px
@@ -35,7 +35,7 @@ entities:
           browser_mod:
             service: browser_mod.popup
             data:
-              title: Watering Time Overview
+              title: Recap tempo irrigazione
               content:
                 type: markdown
                 content: >
