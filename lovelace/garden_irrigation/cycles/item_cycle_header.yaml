@@ -17,7 +17,7 @@ cards:
     name: >
       [[[
         var entity_id = 'input_text.irrigation_cycle{{ cycle }}_name';
-        return states[entity_id].state.toUpperCase() + ' SCHEDULE';
+        return states[entity_id].state.toUpperCase() + ' SCHEDULAZIONE';
       ]]]
     show_state: true
     show_entity_picture: true # use false if the sensor uses mdi icons rather than a picture
@@ -59,7 +59,7 @@ cards:
       browser_mod:
         service: browser_mod.popup
         data:
-          title: Cycle {{ cycle }} Settings
+          title: Ciclo {{ cycle }} impostazioni
           content:
             type: entities
             entities:
