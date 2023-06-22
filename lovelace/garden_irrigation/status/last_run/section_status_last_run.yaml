@@ -78,7 +78,7 @@ entities:
         date.setSeconds(total_seconds);
         return date.toISOString().substr(11, 8);
       ]]]
-    label: "Total watering time last run -&nbsp"
+    label: "Tempo tot di irrigazione dell'ultimo avvio -&nbsp"
     show_label: true
     show_icon: false
     tap_action:
