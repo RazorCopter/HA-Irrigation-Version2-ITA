@@ -215,7 +215,7 @@ card:
 
                           #=== CHANGE THE SWITCH ENTITY_ID
                           - entity: input_text.irrigation_zone{{ zone }}_switch_entity_id
-                            name: Cambaia Nome
+                            name: Cambia Nome
 
                         card_mod:
                           style: >
