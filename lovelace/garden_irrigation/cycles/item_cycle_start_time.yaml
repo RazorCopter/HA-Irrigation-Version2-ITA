@@ -123,14 +123,14 @@ tap_action:
             entities:
               #=== Run Cycle Today Only
               - entity: input_boolean.irrigation_cycle{{ cycle }}_schedule_today_only
-                name: Run Cycle Today Only
+                name: Avvio ciclo solo oggi
                 tap_action: none
 
               - type: divider
 
               #=== Start Time Mode
               - entity: input_select.irrigation_cycle{{ cycle }}_start_time_type
-                name: Start Time Mode
+                name: Modalita avvio orario
                 icon: mdi:theme-light-dark
 
               #=== Actual Time
@@ -138,36 +138,36 @@ tap_action:
                 card_type: conditional
                 conditions:
                   - entity: input_select.irrigation_cycle{{ cycle }}_start_time_type
-                    state: Actual Time
+                    state: Orario Attuale
                 card:
                   type: entities
                   entities:
                     - entity: input_datetime.irrigation_cycle{{ cycle }}_start_time
-                      name: Start Time
+                      name: Orario Avvio
 
               #=== Sunrise Offset
               - type: custom:hui-element
                 card_type: conditional
                 conditions:
                   - entity: input_select.irrigation_cycle{{ cycle }}_start_time_type
-                    state: Sunrise Offset
+                    state: Alba Offset
                 card:
                   type: entities
                   entities:
                     - entity: input_number.irrigation_cycle{{ cycle }}_start_time_sunrise_offset
-                      name: Offset in minutes
+                      name: Offset in minuti
 
               #=== Sunrise Offset
               - type: custom:hui-element
                 card_type: conditional
                 conditions:
                   - entity: input_select.irrigation_cycle{{ cycle }}_start_time_type
-                    state: Sunset Offset
+                    state: Tramonto Offset
                 card:
                   type: entities
                   entities:
                     - entity: input_number.irrigation_cycle{{ cycle }}_start_time_sunset_offset
-                      name: Offset in minutes
+                      name: Offset in minuti
 
             card_mod:
               style: >

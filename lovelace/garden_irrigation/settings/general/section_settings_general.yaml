@@ -18,15 +18,15 @@ entities:
           - !include
             - ../item_settings_select_button_with_icon.yaml
             - entity: input_boolean.irrigation_master_control_switch
-              on_name: "System is ON"
-              off_name: "System is OFF"
+              on_name: "Sistema ON"
+              off_name: "Sistema OFF"
 
           #=== IRRIGATION REMOTE CONTROL
           - !include
             - ../item_settings_select_button_with_icon.yaml
             - entity: input_boolean.irrigation_remote_control
-              on_name: "Remote Control is ON"
-              off_name: "Remote Control is OFF"
+              on_name: "Controllo Remoto ON"
+              off_name: "Controllo Remoto OFF"
               off_icon: mdi:remote-off
 
       #=== IRRIGATION TESTING MODE AND WARNING
@@ -37,14 +37,14 @@ entities:
           - !include
             - ../item_settings_select_button_with_icon.yaml
             - entity: input_boolean.irrigation_testing_mode
-              on_name: "Test Mode is ON"
-              off_name: "Test Mode is OFF"
+              on_name: "Modalita Test ON"
+              off_name: "Modalita Test  OFF"
 
           #=== TESTING MODE WARNING
           - !include
               - item_settings_warning.yaml
-              - entity: input_boolean.irrigation_testing_mode
-                name: 'Warning! Testing mode converts run<br>times from minutes to seconds'
+              - entity: input_boolean.irrigation_testing_modeForecast High Temperature
+                name: 'Avvertimento! La modalità di test converte i tempi<br>di esecuzione da minuti a secondi'
 
       #=== IRRIGATION LOGGING
       - type: horizontal-stack
@@ -59,7 +59,7 @@ entities:
           - !include
             - ../item_settings_check_box_with_entity_icon.yaml
             - entity: input_boolean.logging_irrigation_clear_log
-              name: Clear log at midnight
+              name: Cancella registro a mezzanotte
               on_icon: mdi:notebook-outline
               off_icon: mdi:notebook
               double_tap_action: call-service
@@ -86,27 +86,27 @@ entities:
       - !include
           - ../item_settings_line.yaml
           - entity: input_number.irrigation_number_of_zones
-            name: Number Of Zones
+            name: Numero di Zone
 
       #=== PAUSE BETWEEN ZONES
       - !include
           - ../item_settings_line.yaml
           - entity: input_number.irrigation_pause_between_zones_in_seconds
-            name: Pause Between Zones
+            name: Pausa tra Zone
 
       #=== MINIMUM DURATION WHEN USING WEATHER ADJUSTMENTS
       - !include
           - ../item_settings_line.yaml
           - entity: input_number.irrigation_weather_adjusted_minimum_duration_in_seconds
-            name: Minimum Time To Run A Zone
-            label: When using weather adjustments
+            name: Tempo Minimo per Zona
+            label: Quando si utilizzano le regolazioni meteorologiche
 
       #=== MAXIMUM DURATION WHEN USING WEATHER ADJUSTMENTS
       - !include
           - ../item_settings_line.yaml
           - entity: input_number.irrigation_weather_adjusted_maximum_duration_in_minutes
-            name: Maximum Time To Run A Zone
-            label: When using weather adjustments
+            name: Tempo massimo per gestire una zona
+            label: Quando si utilizzano le regolazioni meteorologiche
 
       #-------------------------
       - type: custom:hui-element
@@ -125,11 +125,11 @@ entities:
           !include
             - item_settings_controller_wifi_signal.yaml
             - entity: "${CONTROLLER}"
-              name: Irrigation Controller
+              name: Controllo irrigazione
 
       #=== TESTING MODE WARNING
       - !include
           - item_settings_warning.yaml
           - entity: input_boolean.irrigation_disable_switches
-            name: 'Warning! Switches disabled'
+            name: 'Avvertimento! Interruttori disabilitati'
 

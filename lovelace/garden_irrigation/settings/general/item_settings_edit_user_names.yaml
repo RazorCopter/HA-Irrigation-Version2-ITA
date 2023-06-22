@@ -12,7 +12,7 @@ cards:
     color_type: blank-card
 
   - type: custom:button-card
-    name: "•  Edit user names "
+    name: "•  Modifica user names "
     icon: mdi:square-edit-outline
     size: 60%
     styles:
@@ -44,8 +44,8 @@ cards:
             cards:
               - type: markdown
                 content: >
-                  Choose the name of up to two users to receive notifications about
-                  irrigation events.
+                  Scegli il nome di un massimo di due utenti per cui ricevere notifiche
+                  di evento irrigazione.
                 card_mod:
                   style: >
                     ha-card {
@@ -65,7 +65,7 @@ cards:
                     }
               - type: markdown
                 content: >
-                  These names are held in:
+                  Questi nomi sono conservati in:
                 card_mod:
                   style: >
                     ha-card {
@@ -84,14 +84,14 @@ cards:
                     }
               - type: markdown
                 content: >
-                  and can be used in your own notification processing as approriate.
+                  e puo essere utilizzato nella propria elaborazione delle notifiche come appropriato.
 
 
-                  When a notification is issued, 'script.notify' is called.
+                  Quando viene emessa una notifica, viene richiamato 'script.notify'.
 
 
-                  This script is <b>NOT</b> inlcuded in this package,
-                  you will need to write your own.
+                  Questo Script: <b>NOT</b incluso in questo pacchetto,
+                  dovrai scrivere il tuo.
                 card_mod:
                   style: >
                     ha-card {

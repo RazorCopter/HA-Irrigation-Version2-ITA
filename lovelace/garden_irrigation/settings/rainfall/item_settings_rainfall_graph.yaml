@@ -14,7 +14,7 @@ entities:
     show_legend: false
   #=== DAY/NIGHT
   - entity: sensor.night_or_day
-    name: Night
+    name: Notte
     y_axis: secondary
     color: black
     show_points: true

@@ -18,33 +18,31 @@ tap_action:
   browser_mod:
     service: browser_mod.popup
     data:
-      title: "ℹ️ INFORMATION"
+      title: "ℹ️ INFORMAZIONI"
       content:
         type: markdown
         content: >
-          Tap a Cycle Start Time to edit the schedule time
+          Toccare un'ora di inizio del ciclo per modificare l'ora della pianificazione
 
-          Tap a Cycle header to edit the name
-
-
-          Tap a Zone to edit its information
+          Tocca un'intestazione Ciclo per modificare il nome
 
 
-          Selecting 'Testing Mode' will change run times to seconds.
+          Tocca una zona per modificarne le informazioni
 
-          e.g a run time of 5 minutes will run for 5 seconds.
+          Selezionando "Modalita' test" i tempi di esecuzione verranno modificati in secondi.
 
+          ad esempio un tempo di esecuzione di 5 minuti funzionerà per 5 secondi.
 
           ---
 
 
-          #### Adjusting Duration For Weather (Experimental)
+          #### Regolazione della durata del meteo (sperimentale)
 
-          Turning on weather adjustments will adjust watering time based on temperature
-          and/or rainfall.
+          L'attivazione delle regolazioni meteorologiche regolera' il tempo di irrigazione in base alla temperatura
+          e/o precipitazioni.
 
 
-          See RAINFALL & TEMPERATURE settings.
+          Vedere le impostazioni PIOGGIA E TEMPERATURA.
         card_mod:
           style: >
             ha-card {

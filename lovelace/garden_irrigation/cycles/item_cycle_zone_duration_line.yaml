@@ -79,12 +79,12 @@ card:
                                         states['input_boolean.irrigation_cycle1_running'].state == 'off' &&
                                         states['input_boolean.irrigation_cycle2_running'].state == 'off' &&
                                         states['input_boolean.irrigation_cycle3_running'].state == 'off')
-                                      return 'Run This Zone Now';
+                                      return 'Avvia Questa Zona Ora';
                                     else if (
                                             entity.state == 'on' &&
                                             states['timer.irrigation_zone' + zone + '_timer'].state == 'active'
                                             )
-                                      return 'Stop This Zone';
+                                      return 'Stop Questa Zona';
                                     else return '';
                                   ]]]
                                 icon: >
@@ -197,7 +197,7 @@ card:
 
                           #=== CHANGE DURATION
                           - entity: input_number.irrigation_cycle{{ cycle }}_zone{{ zone }}_duration_box
-                            name: Duration
+                            name: Durata
 
                           #=== CHANGE DURATION WHEN USING REMOTE CONTROL (If Remote Control is active)
                           - type: conditional
@@ -211,11 +211,11 @@ card:
 
                           #=== CHANGE ZONE NAME
                           - entity: input_text.irrigation_zone{{ zone }}_name
-                            name: Zone Name
+                            name: Nome Zona
 
                           #=== CHANGE THE SWITCH ENTITY_ID
                           - entity: input_text.irrigation_zone{{ zone }}_switch_entity_id
-                            name: Switch Name
+                            name: Cambaia Nome
 
                         card_mod:
                           style: >
@@ -300,34 +300,34 @@ card:
             - !include
               - item_cycle_day_select_button.yaml
               - entity: input_boolean.irrigation_cycle{{ cycle }}_zone{{ zone }}_mon
-                name: Mon
+                name: Lun
 
             - !include
               - item_cycle_day_select_button.yaml
               - entity: input_boolean.irrigation_cycle{{ cycle }}_zone{{ zone }}_tue
-                name: Tue
+                name: Mar
 
             - !include
               - item_cycle_day_select_button.yaml
               - entity: input_boolean.irrigation_cycle{{ cycle }}_zone{{ zone }}_wed
-                name: Wed
+                name: Mer
 
             - !include
               - item_cycle_day_select_button.yaml
               - entity: input_boolean.irrigation_cycle{{ cycle }}_zone{{ zone }}_thu
-                name: Thu
+                name: Gio
 
             - !include
               - item_cycle_day_select_button.yaml
               - entity: input_boolean.irrigation_cycle{{ cycle }}_zone{{ zone }}_fri
-                name: Fri
+                name: Ven
 
             - !include
               - item_cycle_day_select_button.yaml
               - entity: input_boolean.irrigation_cycle{{ cycle }}_zone{{ zone }}_sat
-                name: Sat
+                name: Sab
 
             - !include
               - item_cycle_day_select_button.yaml
               - entity: input_boolean.irrigation_cycle{{ cycle }}_zone{{ zone }}_sun
-                name: Sun
+                name: Dom

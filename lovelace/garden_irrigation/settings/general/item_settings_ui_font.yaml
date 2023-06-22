@@ -6,7 +6,7 @@
 type: custom:button-card
 entity: input_text.irrigation_ui_font_family
 show_state: true
-name: User Interface Font
+name: UI Carattere
 size: 30%
 styles:
   grid:
@@ -40,7 +40,7 @@ tap_action:
         type: vertical-stack
         cards:
           - type: markdown
-            content: Leave blank to use the font from the current theme.
+            content: Lascia vuoto per utilizzare il carattere del tema corrente.
             card_mod:
               style: >
                 ha-card {
@@ -51,7 +51,7 @@ tap_action:
           - type: entities
             entities:
               - entity: input_text.irrigation_ui_font_family
-                name: Font Name
+                name: Nome Font
             card_mod:
               style: >
                 ha-card {
