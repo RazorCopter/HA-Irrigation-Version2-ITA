@@ -71,7 +71,7 @@ custom_fields:
     [[[
       var cycle = '{{ cycle }}';
       var type = states['input_select.irrigation_cycle' + cycle + '_start_time_type'].state;
-      var today_only = states['input_boolean.irrigation_cycle' + cycle + '_schedule_today_only'].state;
+      var today_only = states['input_boolean.irrigation_cycle' + cycle + '__today_only'].state;
       if (type != 'Actual Time' && today_only == 'on')
         return `<ha-icon
           icon="mdi:theme-light-dark"
@@ -88,7 +88,7 @@ custom_fields:
           <ha-icon
           icon="mdi:calendar-today"
           style="width: 1em; height: 1em; color: var(--primary-background-color);">`;
-      else if (states['input_boolean.irrigation_cycle' + cycle + '_schedule_today_only'].state == 'on')
+      else if (states['input_boolean.irrigation_cycle' + cycle + '__today_only'].state == 'on')
         return `<ha-icon
           icon="mdi:calendar-today"
           style="width: 1em; height: 1em; color: var(--accent-color);">
@@ -114,7 +114,7 @@ tap_action:
       title: >
         [[[
           var entity_id = 'input_text.irrigation_cycle{{ cycle }}_name';
-          return states[entity_id].state.toUpperCase() + ' SCHEDULE';
+          return states[entity_id].state.toUpperCase() + ' SCHEDULAZIONE';
         ]]]
       content:
         type: vertical-stack
