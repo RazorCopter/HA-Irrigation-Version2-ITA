@@ -24,13 +24,13 @@ entities:
             var cycle3_running = states['input_boolean.irrigation_cycle3_running'].state;
 
             if (cycle1_running == 'on')
-              return 'RUNNING: ';
+              return 'AVVIATO: ';
             else if (cycle2_running == 'on')
-              return 'RUNNING: ';
+              return 'AVVIATO: ';
             else if (cycle3_running == 'on')
-              return 'RUNNING: ';
+              return 'AVVIATO: ';
             else
-              return 'NEXT RUN: ';
+              return 'PROSSIMO AVVIO: ';
           ]]]
         show_label: true
         show_icon: false
@@ -102,11 +102,11 @@ entities:
           browser_mod:
             service: browser_mod.popup
             data:
-              title: "⚠️ CYCLE SCHEDULE CLASH"
+              title: "⚠️ CICLO SCHEDULATO CRASH"
               content:
                 type: markdown
                 content: |
-                  #### WARNING! You have overlapping cycle schedules...
+                  #### ATTENZIONE! Hai programmi di cicli sovrapposti...
 
                   {{ state_attr('binary_sensor.irrigation_cycle_start_clash', 'clash_text') }}
 
