@@ -1,6 +1,13 @@
 
-<h1 align="center">A Garden Irrigation System for Home Assistant</h1>
+<h1 align="center">IRRIGAZIONE GIARDINO per Home Assistant</h1>
 
+
+# Giugno 2023
+
+Traduzione in Italiano
+
+
+-------------------------------------------------------------------
 __Please note that I recommend some understanding of Home Assistant in general and of Lovelace in particular if you choose to try this out.__
 
 # May 2023
