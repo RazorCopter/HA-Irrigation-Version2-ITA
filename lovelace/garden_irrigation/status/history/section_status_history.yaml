@@ -10,7 +10,7 @@ entities:
   - !include
     - ../item_status_include_section_check_box.yaml
     - entity: input_boolean.irrigation_ui_show_status_history
-      name: HISTORY TOTALS
+      name: TOTALE STORICO
 
   #=== HISTORY COLUMN HEADINGS
   - type: custom:hui-element
@@ -40,8 +40,8 @@ entities:
           yesterday:
             - justify-self: start
         custom_fields:
-          today: Today
-          yesterday: Yesterday
+          today: Oggi
+          yesterday: Ieri
           
       #=== ZONE HISTORY
       - type: divider
