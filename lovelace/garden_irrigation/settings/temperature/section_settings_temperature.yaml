@@ -1,4 +1,3 @@
-
 #=========================
 #=== TEMPERATURE SETTINGS
 #=========================
@@ -39,8 +38,8 @@ entities:
       - !include
           - ../item_settings_line.yaml
           - entity: input_number.irrigation_days_of_temp_history_used
-            name: Number of days history to use
-            label: (0 to 4) If zero only the temperature today is used
+            name: Numero di giorni storico in uso
+            label: (0 di 4) Se zero viene utilizzata solo la temperatura odierna
 
       #=== TEMPERATURE BASELINE
       - !include
