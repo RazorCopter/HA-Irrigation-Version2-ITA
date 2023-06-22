@@ -8,14 +8,14 @@ entity: {{ entity }}
 name: >
   [[[
     var name = '{{ name }}';
-    if (name == 'DETAILS OF LAST RUN' &&
+    if (name == 'DETTAGLI ULTIMO AVVIO' &&
         (
         states['input_boolean.irrigation_cycle1_running'].state == 'on' ||
         states['input_boolean.irrigation_cycle2_running'].state == 'on' ||
         states['input_boolean.irrigation_cycle3_running'].state == 'on'
         )
       )
-      return 'DETAILS OF THIS RUN';
+      return 'DETTTAGLI QUESTO AVVIO';
     else
       return name;
   ]]]
