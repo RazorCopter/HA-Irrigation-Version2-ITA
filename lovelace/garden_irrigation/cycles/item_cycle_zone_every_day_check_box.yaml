@@ -7,7 +7,7 @@
 #===============================
 type: custom:button-card
 entity: {{ entity }}
-name: Every<br>day
+name: Ogni<br>giorno
 size: 60%
 styles:
   grid:
