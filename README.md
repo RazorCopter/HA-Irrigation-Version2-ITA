@@ -7,7 +7,7 @@
 Traduzione in Italiano
 
 
-![Logo](irrigazione.jpg)
+![Logo](Irrigazione.jpg)
 
 
 -------------------------------------------------------------------
