@@ -1,0 +1,152 @@
+#=========================
+#=== TEMPERATURE SETTINGS
+#=========================
+type: entities
+entities:
+
+  - type: custom:hui-element
+    card_type: vertical-stack
+    cards:
+
+      #=== TEMPERATURE SETTINGS
+      - type: custom:button-card  
+        show_icon: false
+        name: SETTAGGI TEMPERATURE
+        tap_action:
+          action: none
+
+        #=== ANCHOR STYLES FOR ALL HEADINGS ON THE PAGE
+        styles: &title_style
+          card:
+            - color: var(--secondary-text-color)
+            - border-radius: 0em
+            - background: none
+            - padding-top: 0em
+            - padding-bottom: 0em
+            - padding-left: 0.5em
+            - font-family: >
+                [[[
+                  return states['input_text.irrigation_ui_font_family'].state
+                ]]]
+            - font-size: 18px
+          name:
+            - justify-self: start
+            - border-left: 3px solid var(--accent-color)
+            - padding-left: 0.5em
+
+      #=== NUMBER OF DAYS TO USE
+      - !include
+          - ../item_settings_line.yaml
+          - entity: input_number.irrigation_days_of_temp_history_used
+            name: Numero di giorni storico in uso
+            label: (0 di 4) Se zero viene utilizzata solo la temperatura odierna
+
+      #=== TEMPERATURE BASELINE
+      - !include
+          - ../item_settings_line.yaml
+          - entity: input_number.irrigation_temperature_baseline
+            name: Temperatura Base
+            label: Il superamento di questa temperatura aumenta il tempo di irrigazione
+            padding: 0em 0em 0.3em 0em
+
+      #-------------------------
+      - type: custom:hui-element
+        row_type: divider
+      #-------------------------
+
+      #=== TEMPERATURE DATA
+      - type: custom:button-card  
+        show_icon: false
+        name: DATI TEMPERATURA
+        tap_action:
+          action: none
+        styles: *title_style
+
+      #=== TEMPERATURE MULTIPLIER
+      - !include
+          - ../item_settings_multiplier_line.yaml
+          - entity: input_number.irrigation_temp_multiplier
+            name: "Moltiplicatore Corrente ( ℹ️ )"
+            label: Calcolato in base alla temperatura e alla linea di base
+
+      #=== HIGHEST FORECAST HIGH TEMPERATURE TODAY
+      - !include
+          - ../item_settings_line.yaml
+          - entity: input_number.irrigation_temperature_highest_forecast_high_temp_today
+            name: Temperatura massima prevista oggi
+            round: 1
+            tap_action: none
+
+      #=== HIGHEST ACTUAL TEMPERATURE TODAY
+      - !include
+          - ../item_settings_line.yaml
+          - entity: input_number.irrigation_temperature_highest_actual_temp_today
+            name: Temperatura effettiva piu alta registrata oggi
+            round: 1
+            tap_action: none
+            padding: 0em 0em 0.3em 0em
+
+      #-------------------------
+      - type: custom:hui-element
+        row_type: divider
+      #-------------------------
+
+      #=== FORECAST HIGH VS. ACTUAL TEMPERATURE
+      - type: custom:button-card  
+        show_icon: false
+        name:  ALTA TEMPERATURA - <font color=IndianRed>Forecast</font> vs. <font color=SteelBlue>Attuale</font>
+        tap_action:
+          action: none
+        styles: *title_style
+
+      #=== FORECAST VS. ACTUAL HIGH TEMPERATURE GRAPH
+      - !include item_settings_temperature_graph.yaml
+
+      #=== USE FORECAST HIGH TEMPERATURE
+      - !include item_settings_use_forecast_high_temp.yaml
+
+      #-------------------------
+      - type: custom:hui-element
+        row_type: divider
+      #-------------------------
+
+      #=== TEMPERATURE HISTORY
+      - type: custom:button-card  
+        show_icon: false
+        name: STORICO ALTA TEMPERATURA
+        tap_action:
+          action: none
+        styles: *title_style
+
+      #=== HIGH TEMPERATURE YESTERDAY
+      - !include
+          - ../item_settings_line.yaml
+          - entity: input_number.irrigation_high_temp_1
+            name: Ieri
+            round: 1
+            tap_action: none
+
+      #=== HIGH TEMPERATURE 2 DAYS AGO
+      - !include
+          - ../item_settings_line.yaml
+          - entity: input_number.irrigation_high_temp_2
+            name: Due giorni fa
+            round: 1
+            tap_action: none
+
+      #=== HIGH TEMPERATURE 3 DAYS AGO
+      - !include
+          - ../item_settings_line.yaml
+          - entity: input_number.irrigation_high_temp_3
+            name: Tre giorni fa
+            round: 1
+            tap_action: none
+
+      #=== HIGH TEMPERATURE 4 DAYS AGO
+      - !include
+          - ../item_settings_line.yaml
+          - entity: input_number.irrigation_high_temp_4
+            name: Quattro giorni fa
+            round: 1
+            tap_action: none
+
