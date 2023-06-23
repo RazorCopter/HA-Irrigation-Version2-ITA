@@ -7,6 +7,9 @@
 Traduzione in Italiano
 
 
+![Logo](irrigazione.jpg)
+
+
 -------------------------------------------------------------------
 __Please note that I recommend some understanding of Home Assistant in general and of Lovelace in particular if you choose to try this out.__
 
