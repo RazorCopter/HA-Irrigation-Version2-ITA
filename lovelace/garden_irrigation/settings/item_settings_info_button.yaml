@@ -1,0 +1,56 @@
+# lovelace_gen
+
+#================
+#=== INFO BUTTON
+#================
+type: custom:button-card
+icon: mdi:information-outline
+show_name: false
+size: 100%
+styles:
+  card:
+    - background: none
+    - width: 1.9em
+  icon:
+    - color: var(--accent-color)
+tap_action:
+  action: fire-dom-event
+  browser_mod:
+    service: browser_mod.popup
+    data:
+      title: "ℹ️ INFORMAZIONI"
+      content:
+        type: markdown
+        content: >
+          Toccare un'ora di inizio del ciclo per modificare l'ora della pianificazione
+
+          Tocca un'intestazione Ciclo per modificare il nome
+
+
+          Tocca una zona per modificarne le informazioni
+
+          Selezionando "Modalita' test" i tempi di esecuzione verranno modificati in secondi.
+
+          ad esempio un tempo di esecuzione di 5 minuti funzionerà per 5 secondi.
+
+          ---
+
+
+          #### Regolazione della durata del meteo (sperimentale)
+
+          L'attivazione delle regolazioni meteorologiche regolera' il tempo di irrigazione in base alla temperatura
+          e/o precipitazioni.
+
+
+          Vedere le impostazioni PIOGGIA E TEMPERATURA.
+        card_mod:
+          style: >
+            ha-card {
+              font-family: {% raw %}{{ states('input_text.irrigation_ui_font_family') }}{% endraw %};
+            }
+      #=== Style needed for pop-up title
+      style:
+        $: |
+          .mdc-dialog .mdc-dialog__container .mdc-dialog__surface {
+              font-family: {% raw %}{{ states('input_text.irrigation_ui_font_family') }}{% endraw %};
+            }
