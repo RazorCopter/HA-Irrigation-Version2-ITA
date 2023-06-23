@@ -159,7 +159,7 @@ template:
 
   #=== Next Scheduled Run - used on Status Page
   - sensor:
-      - name: Irrigazione prossimo avvio
+      - name: irrigation next run
         unique_id: irrigation_next_run
         state: >
           {% if is_state('input_boolean.irrigation_master_control_switch', 'off') %}
